@@ -55,6 +55,7 @@ stratified_palette <- function( starting_season ) {
 #' @importFrom dplyr filter group_by reframe mutate left_join ungroup
 #' @importFrom tidyr pivot_longer
 #' @importFrom ggnewscale new_scale_color new_scale_fill
+#' @importFrom forcats fct_inorder
 #' @importFrom ggh4x facetted_pos_scales
 #' @import ggplot2
 #' @rdname plot.nasc
