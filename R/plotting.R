@@ -144,8 +144,7 @@ plot_nasc <- function( data ,
                      ymin = - Inf ,
                      ymax = Inf ,
                      fill = Season ) ,
-      data = season_interval %>%
-        mutate( Season = fct_inorder( Season ) ) ,
+      data = seasons ,
       alpha = background_alpha
     ) +
     scale_x_date( ) +
@@ -172,13 +171,13 @@ plot_nasc <- function( data ,
                      ymin = LCI ,
                      ymax = UCI ,
                      color = "A" ) ,
-      data = season_interval %>%
-        reframe( Date_start = rep( x = season_interval$Date_start ,
+      data = seasons %>%
+        reframe( Date_start = rep( x = seasons$Date_start ,
                                    times = 4 ) ,
-                 Date_end = rep( x = season_interval$Date_end ,
+                 Date_end = rep( x = seasons$Date_end ,
                                  times = 4 ) ,
                  Frequency = rep( x = paste0( frequency , "kHz" ) ,
-                                  each = nrow( season_interval ) ) ) %>%
+                                  each = nrow( seasons ) ) ) %>%
         left_join( data %>%
                      filter( Frequency %in% paste0( frequency , "kHz" ) ) %>%
                      group_by( Frequency ) %>%
