@@ -58,9 +58,9 @@ stratified_palette <- function( starting_season ) {
 #' @importFrom forcats fct_inorder
 #' @importFrom ggh4x facetted_pos_scales
 #' @import ggplot2
-#' @rdname plot.nasc
+#' @rdname plot_nasc
 #' @export
-plot.nasc <- function( data ,
+plot_nasc <- function( data ,
                        frequency = c( 38 , 70 , 120 , 200 ) ,
                        month_pad = 2 ,
                        season_definition = "meteorological" ,
