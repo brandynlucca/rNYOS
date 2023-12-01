@@ -57,6 +57,7 @@ stratified_palette <- function( starting_season ) {
 #' @importFrom ggnewscale new_scale_color new_scale_fill
 #' @importFrom forcats fct_inorder
 #' @importFrom ggh4x facetted_pos_scales
+#' @importFrom lubridate days
 #' @import ggplot2
 #' @rdname plot_nasc
 #' @export
