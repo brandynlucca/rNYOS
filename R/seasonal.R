@@ -12,7 +12,7 @@
 #'
 #' @rdname seasonal_interval
 #' @importFrom lubridate month year years leap_year ymd interval
-#' @importFrom dplyr mutate case_when
+#' @importFrom dplyr mutate case_when slice if_else
 #' @export
 seasonal_interval <- function( data ,
                                month_pad = 2 ,
