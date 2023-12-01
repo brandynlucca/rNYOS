@@ -300,6 +300,9 @@ batch.process <- function( directory ,
   # ----------------------------------------------------------------------------
   # Map out, distribute, and concatenate files
   # ----------------------------------------------------------------------------
+  save_directory <- ifelse( missing( save_directory ) ,
+                            NA ,
+                            save_directory )
   # List files
   list.files( directory ,
               pattern = '.csv' ,
