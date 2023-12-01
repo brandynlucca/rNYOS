@@ -10,9 +10,9 @@
 #' @param write_file Write file. (Default: `F`)
 #' @param save_directory File path where processed files will be saved.
 #'
-#' @importFrom stringr str_extract str_detect
+#' @importFrom stringr str_extract str_detect str_split
 #' @importFrom readr read_csv cols
-#' @importFrom dplyr mutate group_by ungroup rename arrange filter reframe select
+#' @importFrom dplyr mutate group_by ungroup rename arrange filter reframe select between
 #' @importFrom tidyr unnest
 #' @importFrom purrr as_vector
 #' @importFrom lubridate ymd_hms
