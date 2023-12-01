@@ -11,8 +11,9 @@
 #' @param season_definition Season definition (meteorological vs astronomical).
 #'
 #' @rdname seasonal_interval
-#' @importFrom lubridate month year years leap_year ymd interval
+#' @importFrom lubridate month year years leap_year ymd interval %within%
 #' @importFrom dplyr mutate case_when slice if_else
+#' @importFrom tibble tibble
 #' @export
 seasonal_interval <- function( data ,
                                month_pad = 2 ,
