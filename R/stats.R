@@ -13,7 +13,7 @@
 #' @importFrom purrr map_dbl
 #' @importFrom magrittr %>%
 #' @export
-statified.mean <- function( data ,
+stratified.mean <- function( data ,
                             ci_pct = 0.95 ) {
   # ----------------------------------------------------------------------------
   # Calculate confidence interval percentile
