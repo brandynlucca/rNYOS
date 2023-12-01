@@ -306,7 +306,7 @@ batch.process <- function( directory ,
               full.names = T ) %>%
     # Map and concatenate files
     map_dfr( . ,
-             ~ export_read( .x ,
+             ~ read.export( .x ,
                             write_file = write_file ,
                             save_directory = save_directory ) ,
              # Progress bar
