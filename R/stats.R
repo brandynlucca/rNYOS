@@ -9,7 +9,7 @@
 #' @param data Export tibble.
 #' @param ci_pct Confidence interval percentile. (Default = 0.95)
 #' @rdname stratified.mean
-#' @importFrom dplyr nest_by ungroup mutate select
+#' @importFrom dplyr nest_by ungroup mutate select n group_by
 #' @importFrom purrr map_dbl
 #' @importFrom magrittr %>%
 #' @export
