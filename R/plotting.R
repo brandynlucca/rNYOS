@@ -95,6 +95,13 @@ plot_nasc <- function( data ,
   # ----------------------------------------------------------------------------
   # Axis limits and breaks
   # ----------------------------------------------------------------------------
+  # y-axis limits
+  input_data %>%
+    mutate( Survey_CI = if_else( is.na( Survey_CI ) ,
+                                 0 ,
+                                 Survey_CI ) ) %>%
+    group_by( Frequency ) %>%
+    reframe( Max = max( Survey_mean_NASC + Survey_CI ) * 1.10 ) -> frequency_limits
   # y-axis breaks
   lapply(
     1 : nrow( frequency_limits ) ,
@@ -107,13 +114,6 @@ plot_nasc <- function( data ,
              collapse = "," )
     }
   ) -> frequency_breaks
-  # y-axis limits
-  input_data %>%
-    mutate( Survey_CI = if_else( is.na( Survey_CI ) ,
-                                 0 ,
-                                 Survey_CI ) ) %>%
-    group_by( Frequency ) %>%
-    reframe( Max = max( Survey_mean_NASC + Survey_CI ) * 1.10 ) -> frequency_limits
   # combine to create parseable text for the y-axis
   lapply(
     1 : nrow( frequency_limits ) ,
