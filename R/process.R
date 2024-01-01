@@ -159,6 +159,10 @@ read.export <- function( file ,
   # Layer
   layer_depth_detect <- str_detect( column_names ,
                                     pattern = "Layer_depth_" )
+  thickness_detect = str_detect( column_names ,
+                                 pattern = "Thickness" )
+  depth_detect = str_detect( column_names ,
+                             pattern = "Depth" )
   # Replace
   if ( sum( layer_depth_detect ) < 1 ) {
     if ( sum( thickness_detect ) == 1 ) {
@@ -207,8 +211,6 @@ read.export <- function( file ,
   } else {
     data -> output
   }
-  depth_detect <- str_detect( column_names ,
-                              pattern = "Depth_mean" )
   # ----------------------------------------------------------------------------
   # Save file ?
   # ----------------------------------------------------------------------------
