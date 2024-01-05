@@ -29,7 +29,7 @@ read.export <- function( file ,
   survey_name <- gsub( "NYOS" ,
                        "" ,
                        str_extract( file ,
-                                    pattern = "([0-9]+)+" ) )
+                                    pattern = "NYOS+([0-9]+)+" ) )
   # ----------------------------------------------------------------------------
   # Frequency name
   frequency_name <- gsub( "khz" ,
